@@ -36,7 +36,7 @@ const Login = () => {
                         </div>
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                             <label htmlFor="" className="form-label">Password</label>
-                            <input onChange={inputHandler} type="text" className="form-control" name="password" value={inputField.password} />
+                            <input onChange={inputHandler} type="password" className="form-control" name="password" value={inputField.password} />
                         </div>
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                             <button onClick={readValue} className="btn btn-primary">Sign In</button>
