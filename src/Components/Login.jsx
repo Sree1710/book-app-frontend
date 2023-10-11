@@ -15,7 +15,7 @@ const Login = () => {
     const readValue=()=>{
         console.log(inputField)
         if (inputField.username=="admin" && inputField.password=="12345") {
-            navigate("/add")
+            navigate("/addb")
         } else {
             alert("Invalid Credentials")
         }
