@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
     const [inputField,setInputField]=useState(
         {username:"",password:""}
     )
 
-    // const navigate=useNavigate()
+    const navigate=useNavigate()
 
     const inputHandler=(event)=>{
         setInputField({...inputField,[event.target.name]:event.target.value})
