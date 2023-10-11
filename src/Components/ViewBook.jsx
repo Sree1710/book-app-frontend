@@ -43,11 +43,11 @@ const ViewBook = () => {
                                             <img height="400px" src={value.bookImage} className="card-img-top" alt="..." />
                                             <div className="card-body">
                                                 <h5 className="card-title">{value.bookName}</h5>
+                                                <p className="card-text">Genre: {value.bookId}</p>
                                                 <p className="card-text">Author: {value.author}</p>
                                                 <p className="card-text">Publisher and Publishing Year: {value.publisher},{value.publishYear}</p>
                                                 <p className="card-text">Genre: {value.genre}</p>
                                                 <p className="card-text">Stock: {value.stock}</p>
-                                                <a href="#" className="btn btn-primary">Buy Now</a>
                                             </div>
                                         </div>
                                     </div>
