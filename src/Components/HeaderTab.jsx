@@ -1,9 +1,9 @@
 import React from 'react'
 
-const header = () => {
-    return (
-        <div>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+const HeaderTab = () => {
+  return (
+    <div>
+        <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">Books App</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,8 +27,8 @@ const header = () => {
                     </div>
                 </div>
             </nav>
-        </div>
-    )
+    </div>
+  )
 }
 
-export default header
+export default HeaderTab
