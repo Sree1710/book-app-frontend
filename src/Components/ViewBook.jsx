@@ -1,5 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import HeaderTab from './HeaderTab'
+
 
 const ViewBook = () => {
     const [bookData, setBookData] = useState(
@@ -23,6 +25,7 @@ const ViewBook = () => {
 
     return (
         <div>
+            <HeaderTab/>
             <div className="container">
                 <div className="row">
                     <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -40,11 +43,11 @@ const ViewBook = () => {
                                             <img height="400px" src={value.bookImage} className="card-img-top" alt="..." />
                                             <div className="card-body">
                                                 <h5 className="card-title">{value.bookName}</h5>
+                                                <p className="card-text">Book ID: {value.bookId}</p>
                                                 <p className="card-text">Author: {value.author}</p>
                                                 <p className="card-text">Publisher and Publishing Year: {value.publisher},{value.publishYear}</p>
                                                 <p className="card-text">Genre: {value.genre}</p>
                                                 <p className="card-text">Stock: {value.stock}</p>
-                                                <a href="#" className="btn btn-primary">Buy Now</a>
                                             </div>
                                         </div>
                                     </div>
