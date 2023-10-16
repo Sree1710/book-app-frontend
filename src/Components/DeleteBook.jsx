@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import HeaderTab from './HeaderTab'
+import axios from 'axios'
 
 
 const DeleteBook = () => {
     const [inputField,setInputField]=useState(
-        {bookId:"",bookName:"",bookImage:"",author:"",publisher:"",publishYear:"",genre:"",stock:""}
+        {bookId:""}
     )
+
+    const apiLink="http://localhost:3001/deleteb"
 
     const inputHandler=(event)=>{
         setInputField({...inputField,[event.target.name]:event.target.value})
@@ -13,6 +16,16 @@ const DeleteBook = () => {
 
     const readValue=()=>{
         console.log(inputField)
+        axios.post(apiLink,inputField).then(
+            (Response)=>{
+                if (Response.data.status=="success") {
+                    alert("Successfully Deleted")
+                    setInputField({bookId:""})
+                } else {
+                    alert("Something Wrong")
+                }
+            }
+        )
     }
 
     return (
